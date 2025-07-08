@@ -21,13 +21,13 @@ xr_new=0; yr_new=0					# robot's next coordinates
 
 phi_old=np.pi/2						# initial heading
 phi_goal = np.pi                        		# goal orientation 
-phi_old_old = phi_old;
+phi_old_old = phi_old
 
-dist_old = 0;						# distance between robot position and goal position
-dist_old_old = dist_old;
+dist_old = 0 						# distance between robot position and goal position
+dist_old_old = dist_old
 
-integrale_velocita = 0;					# integral term linear velocity
-integrale_angolare = 0;					# integral term angular velocity
+integrale_velocita = 0 					# integral term linear velocity
+integrale_angolare = 0 					# integral term angular velocity
 
 ############################################################################################
 
@@ -72,8 +72,12 @@ for i in range(0, n_goal):
   x_goal, y_goal = goal[i]
   line0, = axes.plot(x_goal,y_goal, 'r*')
   
-line1.set_xdata(xr), line1.set_ydata(yr)
-line2.set_xdata(xr), line2.set_ydata(yr)
+#line1.set_xdata(xr), line1.set_ydata(yr)
+#line2.set_xdata(xr), line2.set_ydata(yr)
+
+line1.set_xdata([xr]), line1.set_ydata([yr])
+line2.set_xdata([xr]), line2.set_ydata([yr])
+
 plt.draw()
 axes.set_xlim(0, 6), axes.set_ylim(0, 6)
 plt.pause(0.01)
@@ -90,8 +94,8 @@ for i in range(0, n_goal):
 
     if (xr_new-xg)**2<eps and (yr_new-yg)**2<eps:
         print("GOAL (", xg, ", ", yg, ") ","RAGGIUNTO")  
-        integrale_velocita = 0;
-        integrale_angolare = 0;
+        integrale_velocita = 0
+        integrale_angolare = 0 
         break
     
     dist_now = np.sqrt((xg-xr_new)**2+(yg-yr_new)**2)   
