@@ -1,22 +1,12 @@
 # GoToGoal
+This project implements a differential drive, two-wheeled drone controlled with a PID control loop.
 
+The drone navigates a 2-D environment to reach a predefined set of points in a given order.
 
-
-Project developed for the class Droni e Sistemi Robotici Autonomi.
-
-
+This project was originally developed for the class Droni e Sistemi Robotici Autonomi.
 
 Original creation date : June 23, 2024
 
 
-
-Project Description:
-
-
-
-PID control loop developed in Python for a two wheeled drone with differential drive and controlled movement along a path with predefined waypoints.
-
-
-
-
-
+## References
+1. Dudek, Gregory and Jenkin, Michael (2024). Computational principles of mobile robotics. *Cambridge university press*

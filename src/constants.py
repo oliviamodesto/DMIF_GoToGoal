@@ -1,0 +1,9 @@
+K_v = 0.32  # proportional coefficient for linear velocity
+K_phi = 0.60  # proportional coefficient for angular velocity
+K_i = 0.01  # integral coefficient for linear velocity
+K_w = 0.005  # integral coefficient for angular velocity
+K_dv = 0.005  # derivative coefficient for linear velocity
+K_dw = 0.005  # derivative coefficient for angular velocity
+t = .1  # time step
+eps = 0.002  # margin error
+l = 1  # wheel-center distance
